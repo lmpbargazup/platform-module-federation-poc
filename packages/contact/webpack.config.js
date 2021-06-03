@@ -7,12 +7,12 @@ module.exports = {
   output: {
     filename: "[name]".js,
     path: path.resolve(__dirname, "./dist"),
-    publicPath: "http://localhost:3000/",
+    publicPath: "http://localhost:3002/",
   },
   devServer: {
     contentBase: path.resolve(__dirname, "./dist"),
     index: "index.html",
-    port: 3000,
+    port: 3002,
     historyApiFallback: true,
   },
   resolve: {
@@ -37,10 +37,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./public/index.html",
-      title: "app",
+      title: "contact",
     }),
     new ModuleFederationPlugin({
-      name: "App",
+      name: "contact",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./plugin": "./src/contact",
+      },
     }),
   ],
 };
