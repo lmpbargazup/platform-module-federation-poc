@@ -3,12 +3,21 @@ import { createContext, useContext, useState } from "react";
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
-  const [state, setState] = useState({ test: "" });
+  const [state, setState] = useState({
+    currentPlugin: {
+      id: "1",
+      path: "/",
+      url: "http://localhost:3001/remoteEntry.js",
+      scope: "home",
+      module: "./plugin",
+    },
+  });
 
-  const addTestToState = () => setState({ test: "test" });
+  const setCurrentPlugin = (plugin) =>
+    setState((prevState) => ({ ...prevState, currentPlugin: plugin }));
 
   const actions = {
-    addTestToState,
+    setCurrentPlugin,
   };
 
   return (

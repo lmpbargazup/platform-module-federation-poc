@@ -1,14 +1,7 @@
-import { useRouter } from "next/router";
+import Module from "../components/module";
 
-const Comment = () => {
-  const router = useRouter();
-  const slug = router.query.slug || [];
-
-  return (
-    <>
-      <h1>Slug: {slug.join("/")}</h1>
-    </>
-  );
+const Slug = () => {
+  return <Module />;
 };
 
-export default Comment;
+export default Slug;

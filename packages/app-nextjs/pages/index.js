@@ -1,13 +1,13 @@
 import React from "react";
-import { constants } from "../constants/constants";
-import { useAppContext } from "../context/state";
-
-const { API_PLUGINS } = constants;
+import Module from "../components/module";
 
 const Home = () => {
-  const { state, actions } = useAppContext();
-
-  return <div>test: {state.test}</div>;
+  return (
+    <>
+      <h1>Root Home</h1>
+      <Module />
+    </>
+  );
 };
 
 export default Home;

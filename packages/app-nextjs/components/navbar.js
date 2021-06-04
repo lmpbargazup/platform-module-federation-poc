@@ -9,9 +9,12 @@ const { API_PLUGINS } = constants;
 const Navbar = () => {
   const router = useRouter();
   const [plugins, setPlugins] = useState([]);
-  const { state, actions } = useAppContext();
+  const { actions } = useAppContext();
 
-  console.log(state);
+  const renderPlugin = (plugin) => {
+    actions.setCurrentPlugin(plugin);
+    router.push(plugin.path);
+  };
 
   useEffect(() => {
     axios.get(API_PLUGINS).then(({ data }) => setPlugins(data));
@@ -20,8 +23,6 @@ const Navbar = () => {
   return (
     <div>
       <h1>App NextJS Root</h1>
-      <p>test: {state.test}</p>
-      <button onClick={actions.addTestToState}>test</button>
       <div>
         <nav>
           <ul>
@@ -29,7 +30,7 @@ const Navbar = () => {
               <li key={plugin.id}>
                 <h2
                   style={{ cursor: "pointer" }}
-                  onClick={() => router.push(plugin.path)}
+                  onClick={() => renderPlugin(plugin)}
                 >
                   <a>Go to: {plugin.path}</a>
                 </h2>
