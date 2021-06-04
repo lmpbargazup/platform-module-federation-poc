@@ -6,7 +6,7 @@ const Module = () => {
 
   return (
     <>
-      <System system={state.currentPlugin} />;
+      <System system={state.currentPlugin} />
     </>
   );
 };
