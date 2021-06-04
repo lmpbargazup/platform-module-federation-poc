@@ -1,6 +1,13 @@
 {
   "plugins": [
     {
+      "id": "3",
+      "path": "/about",
+      "url": "http://localhost:3002/remoteEntry.js",
+      "scope": "about",
+      "module": "./plugin"
+    },
+    {
       "id": "2",
       "path": "/contact",
       "url": "http://localhost:3002/remoteEntry.js",
