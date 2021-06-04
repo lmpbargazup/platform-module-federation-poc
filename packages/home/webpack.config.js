@@ -43,7 +43,7 @@ module.exports = {
       name: "home",
       filename: "remoteEntry.js",
       exposes: {
-        "./plugin": "./src/home",
+        "./module": "./src/home",
       },
     }),
   ],

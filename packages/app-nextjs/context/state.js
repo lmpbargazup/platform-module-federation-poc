@@ -9,7 +9,7 @@ export function AppWrapper({ children }) {
       path: "/",
       url: "http://localhost:3001/remoteEntry.js",
       scope: "home",
-      module: "./plugin",
+      module: "./module",
     },
   });
 
