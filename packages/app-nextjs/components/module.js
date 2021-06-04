@@ -4,8 +4,6 @@ import { System } from "../utils/module-federation";
 const Module = () => {
   const { state } = useAppContext();
 
-  console.log(state.currentPlugin);
-
   return (
     <>
       <System system={state.currentPlugin} />;
