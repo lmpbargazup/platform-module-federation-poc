@@ -1,0 +1,18 @@
+{
+  "plugins": [
+    {
+      "id": "2",
+      "path": "/contact",
+      "url": "http://localhost:3002/remoteEntry.js",
+      "scope": "contact",
+      "module": "./plugin"
+    },
+    {
+      "id": "1",
+      "path": "/",
+      "url": "http://localhost:3001/remoteEntry.js",
+      "scope": "home",
+      "module": "./plugin"
+    }
+  ]
+}

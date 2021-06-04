@@ -1,4 +1,5 @@
-import React, { Suspense } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
 const homePlugin = {
@@ -46,12 +47,10 @@ const useDynamicScript = (args) => {
     setFailed(false);
 
     element.onload = () => {
-      console.log(`Dynamic Script Loaded: ${args.url}`);
       setReady(true);
     };
 
     element.onerror = () => {
-      console.error(`Dynamic Script Error: ${args.url}`);
       setReady(false);
       setFailed(true);
     };
@@ -59,7 +58,6 @@ const useDynamicScript = (args) => {
     document.head.appendChild(element);
 
     return () => {
-      console.log(`Dynamic Script Removed: ${args.url}`);
       document.head.removeChild(element);
     };
   }, [args.url]);
@@ -99,10 +97,19 @@ function System(props) {
 }
 
 export default function App() {
+  const [plugins, setPlugins] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/plugins")
+      .then(({ data }) => setPlugins(data));
+  }, []);
+
+  console.log(plugins);
+
   return (
     <Router>
       <h1>App Root</h1>
-
       <div>
         <nav>
           <ul>
@@ -115,16 +122,14 @@ export default function App() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/contact">
-            <Suspense fallback={<div>Loading...</div>}>
-              <System system={contactPlugin} />
-            </Suspense>
-          </Route>
-          <Route path="/">
-            <Suspense fallback={<div>Loading...</div>}>
-              <System system={homePlugin} />
-            </Suspense>
-          </Route>
+          {plugins.map((plugin) => {
+            console.log(plugin);
+            return (
+              <Route path={plugin.path} key={plugin.id}>
+                <System system={plugin} />
+              </Route>
+            );
+          })}
         </Switch>
       </div>
     </Router>
