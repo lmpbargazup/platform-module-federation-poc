@@ -20,7 +20,7 @@ const Menu = () => {
   useEffect(() => {
     axios
       .get(API_PLUGINS)
-      .then(({ data }) => setPlugins(data))
+      .then(({ data }) => setPlugins(data.reverse()))
       .catch((error) => console.log(error));
   }, []);
 
@@ -29,7 +29,6 @@ const Menu = () => {
       const plugin = plugins.filter(
         (plugin) => plugin.path === router.asPath
       )[0];
-      console.log(plugin);
       actions.setCurrentPlugin(plugin);
     }
   }, [plugins]);
@@ -37,7 +36,7 @@ const Menu = () => {
   return (
     <MenuContainer>
       <MenuOptionsContainer>
-        {plugins.map((plugin) => (
+        {plugins.reverse().map((plugin) => (
           <MenuOption onClick={() => renderPlugin(plugin)} key={plugin.id}>
             {plugin.scope}
           </MenuOption>
