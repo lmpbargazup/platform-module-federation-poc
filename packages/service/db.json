@@ -1,25 +1,52 @@
 {
   "modules": [
     {
+      "id": "6",
+      "path": "/application/users",
+      "url": "http://localhost:3004/remoteEntry.js",
+      "scope": "react",
+      "module": "./module",
+      "isMenuOption": false
+    },
+    {
+      "id": "5",
+      "path": "/application/about",
+      "url": "http://localhost:3004/remoteEntry.js",
+      "scope": "react",
+      "module": "./module",
+      "isMenuOption": false
+    },
+    {
+      "id": "4",
+      "path": "/application",
+      "url": "http://localhost:3004/remoteEntry.js",
+      "scope": "react",
+      "module": "./module",
+      "isMenuOption": true
+    },
+    {
       "id": "3",
       "path": "/about",
       "url": "http://localhost:3003/remoteEntry.js",
       "scope": "about",
-      "module": "./module"
+      "module": "./module",
+      "isMenuOption": true
     },
     {
       "id": "2",
       "path": "/contact",
       "url": "http://localhost:3002/remoteEntry.js",
       "scope": "contact",
-      "module": "./module"
+      "module": "./module",
+      "isMenuOption": true
     },
     {
       "id": "1",
       "path": "/",
       "url": "http://localhost:3001/remoteEntry.js",
       "scope": "home",
-      "module": "./module"
+      "module": "./module",
+      "isMenuOption": true
     }
   ]
 }

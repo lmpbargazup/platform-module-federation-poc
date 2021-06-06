@@ -37,9 +37,13 @@ const Menu = () => {
     <MenuContainer>
       <MenuOptionsContainer>
         {plugins.reverse().map((plugin) => (
-          <MenuOption onClick={() => renderPlugin(plugin)} key={plugin.id}>
-            {plugin.scope}
-          </MenuOption>
+          <>
+            {plugin.isMenuOption && (
+              <MenuOption onClick={() => renderPlugin(plugin)} key={plugin.id}>
+                {plugin.scope}
+              </MenuOption>
+            )}
+          </>
         ))}
       </MenuOptionsContainer>
     </MenuContainer>
