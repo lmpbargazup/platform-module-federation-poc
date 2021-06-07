@@ -6,7 +6,7 @@ module.exports = (options) => {
     output: {
       filename: "bundle.js",
       publicPath: "http://localhost:3002/",
-      uniqueName: "contact",
+      uniqueName: "app-contact",
     },
     module: {
       rules: [
@@ -27,7 +27,7 @@ module.exports = (options) => {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: "contact",
+        name: "app-contact",
         filename: "remoteEntry.js",
         exposes: {
           "./module": "./app.js",
