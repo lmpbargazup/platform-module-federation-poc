@@ -1,14 +1,16 @@
 import React from "react";
 
-const loadComponent = (scope, module) => {
-  return async () => {
+const loadComponent = async (scope, module) => {
+  try {
     await __webpack_init_sharing__("default");
-    const container = window[scope]; // or get the container somewhere else
+    const container = await window[scope]; // or get the container somewhere else
     await container.init(__webpack_share_scopes__.default);
     const factory = await window[scope].get(module);
     const Module = factory();
     return Module;
-  };
+  } catch (e) {
+    console.log("error:", e);
+  }
 };
 
 const useDynamicScript = (args) => {
