@@ -1,50 +1,43 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
-module.exports = {
-  entry: "./src/index.js",
-  output: {
-    filename: "[name]".js,
-    path: path.resolve(__dirname, "./dist"),
-    publicPath: "http://localhost:3002/",
-  },
-  devServer: {
-    contentBase: path.resolve(__dirname, "./dist"),
-    index: "index.html",
-    port: 3002,
-    historyApiFallback: true,
-  },
-  resolve: {
-    extensions: [".jsx", ".js", ".json"],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        loader: require.resolve("babel-loader"),
-        options: {
-          presets: [require.resolve("@babel/preset-react")],
+module.exports = (options) => {
+  return {
+    entry: "./index.js",
+    output: {
+      filename: "bundle.js",
+      publicPath: "http://localhost:3002/",
+      uniqueName: "contact",
+    },
+    module: {
+      rules: [
+        {
+          test: /.js$/,
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: "babel-loader",
+              options: {
+                cacheDirectory: true,
+                presets: ["@babel/react", "@babel/env"],
+              },
+            },
+          ],
         },
-      },
-      {
-        test: "/.css$/",
-        use: ["style-loader", "css-loader"],
-      },
+      ],
+    },
+    plugins: [
+      new ModuleFederationPlugin({
+        name: "contact",
+        filename: "remoteEntry.js",
+        exposes: {
+          "./module": "./app.js",
+        },
+
+        shared: ["react", "react-dom"],
+      }),
     ],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./public/index.html",
-      title: "contact",
-    }),
-    new ModuleFederationPlugin({
-      name: "contact",
-      filename: "remoteEntry.js",
-      exposes: {
-        "./module": "./src/contact",
-      },
-    }),
-  ],
+    devServer: {
+      port: 3002,
+    },
+  };
 };
