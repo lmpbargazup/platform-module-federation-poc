@@ -10,19 +10,9 @@ export class AppComponent {
 
   constructor() {}
 
-  logEvent(event) {
-    console.log('chegou um evento no app-angular -> data:', event);
-  }
+  logEvent(event) {}
 
-  startEvent() {
-    console.log('começando a escutar o shell');
-    // @ts-ignore
-    window.EventBus.addEventListener('shell', this.logEvent, true);
-  }
+  startEvent() {}
 
-  stopEvent() {
-    console.log('parando de escutar o shell');
-    // @ts-ignore
-    window.EventBus.removeEventListener('shell', this.logEvent, true);
-  }
+  stopEvent() {}
 }

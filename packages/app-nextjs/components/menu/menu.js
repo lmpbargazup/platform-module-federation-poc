@@ -13,7 +13,6 @@ const Menu = () => {
   const { actions, state } = useAppContext();
 
   const renderPlugin = (plugin) => {
-    console.log(plugin);
     actions.setCurrentPlugin(plugin);
     router.push(plugin.path);
   };
@@ -28,12 +27,12 @@ const Menu = () => {
   }, []);
 
   useEffect(() => {
-    console.log(state.currentPlugin);
     if (plugins.length > 0) {
       const plugin = plugins.filter(
         (plugin) => plugin.path === router.asPath
       )[0];
       actions.setCurrentPlugin(plugin);
+      console.log(plugin);
     }
   }, [plugins]);
 

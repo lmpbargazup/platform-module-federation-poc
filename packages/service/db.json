@@ -20,7 +20,7 @@
     },
     {
       "id": "7",
-      "path": "/angular/",
+      "path": "/angular",
       "url": "http://localhost:3005/remoteEntry.js",
       "scope": "angular",
       "module": "./module",
