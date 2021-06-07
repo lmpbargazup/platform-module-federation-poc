@@ -8,10 +8,19 @@ const Home = () => {
       {/* <Module /> */}
       <System
         system={{
+          url: "http://localhost:3001/remoteEntry.js",
+          scope: "home",
+          module: "./module",
+          id: 1,
+          component: "app-home",
+        }}
+      />
+      <System
+        system={{
           url: "http://localhost:3002/remoteEntry.js",
           scope: "contact",
           module: "./module",
-          id: 10,
+          id: 2,
           component: "app-contact",
         }}
       />

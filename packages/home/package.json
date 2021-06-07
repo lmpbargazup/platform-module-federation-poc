@@ -1,29 +1,27 @@
 {
-  "name": "home",
+  "name": "app-home",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production",
-    "start": "webpack serve --hot --mode=development"
+    "start": "webpack serve --mode=development --devtool=source-map",
+    "build": "webpack --mode=production"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/preset-react": "^7.13.13",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "babel-runtime": "^6.26.0",
     "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.6",
-    "html-webpack-plugin": "^5.3.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
