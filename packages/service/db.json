@@ -61,7 +61,7 @@
       "scope": "about",
       "module": "./module",
       "isMenuOption": true,
-      "component": "angular-about"
+      "component": "app-about"
     },
     {
       "id": "2",

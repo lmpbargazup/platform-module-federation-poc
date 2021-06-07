@@ -43,15 +43,15 @@ class App extends React.Component {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return <h2>React Home</h2>;
 }
 
 function About() {
-  return <h2>About</h2>;
+  return <h2>React About</h2>;
 }
 
 function Users() {
-  return <h2>Users</h2>;
+  return <h2>React Users</h2>;
 }
 
 class AppElement extends HTMLElement {
