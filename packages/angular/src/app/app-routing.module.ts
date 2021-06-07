@@ -9,8 +9,9 @@ const PREFIX = 'angular';
 const withPrefix = (path) => `${PREFIX}${path}`;
 
 const routes: Routes = [
+  { path: '', redirectTo: '/angular/home', pathMatch: 'full' },
   {
-    path: withPrefix(''),
+    path: withPrefix('/home'),
     component: HomeComponent,
   },
   {
