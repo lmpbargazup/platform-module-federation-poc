@@ -32,7 +32,6 @@ const Menu = () => {
         (plugin) => plugin.path === router.asPath
       )[0];
       actions.setCurrentPlugin(plugin);
-      console.log(plugin);
     }
   }, [plugins]);
 
