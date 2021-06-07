@@ -51,26 +51,28 @@ const useDynamicScript = (args) => {
   };
 };
 
-export const System = (props) => {
+export const System = ({ system }) => {
   const { ready, failed } = useDynamicScript({
-    url: props.system && props.system.url,
+    url: system && system.url,
   });
 
-  if (!props.system) {
+  if (!system) {
     return <h2>Not system specified</h2>;
   }
 
   if (!ready) {
-    return <h2>Loading dynamic script: {props.system.url}</h2>;
+    return <h2>Loading dynamic script: {system.url}</h2>;
   }
 
   if (failed) {
-    return <h2>Failed to load dynamic script: {props.system.url}</h2>;
+    return <h2>Failed to load dynamic script: {system.url}</h2>;
   }
 
-  const Component = React.lazy(
-    loadComponent(props.system.scope, props.system.module)
-  );
+  if (!customElements.get(system.component)) {
+    loadComponent(system.scope, system.module);
+  }
+
+  const Component = `${system.component}`;
 
   return (
     <React.Suspense fallback="Loading System">
