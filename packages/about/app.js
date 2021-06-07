@@ -13,4 +13,4 @@ class AppElement extends HTMLElement {
   }
 }
 
-customElements.define("app-about", AppElement);
+customElements.define("angular-about", AppElement);

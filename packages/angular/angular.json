@@ -67,7 +67,7 @@
           "options": {
             "browserTarget": "app-angular:build",
             "extraWebpackConfig": "webpack.config.js",
-            "port": 4200
+            "port": 3005
           },
           "configurations": {
             "production": {

@@ -9,7 +9,7 @@ sharedMappings.register(path.join(__dirname, "tsconfig.json"), [
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:4200/",
+    publicPath: "http://localhost:3005/",
     uniqueName: "app-angular",
   },
   optimization: {
@@ -17,10 +17,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "pipes",
+      name: "angular",
       filename: "remoteEntry.js",
       exposes: {
-        "./Component": "./src/main.ts",
+        "./module": "./src/main.ts",
       },
       shared: {
         "@angular/core": { singleton: true, strictVersion: true },

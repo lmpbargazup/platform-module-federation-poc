@@ -1,6 +1,33 @@
 {
   "modules": [
     {
+      "id": "9",
+      "path": "/angular/users",
+      "url": "http://localhost:3005/remoteEntry.js",
+      "scope": "angular",
+      "module": "./module",
+      "isMenuOption": false,
+      "component": "app-angular"
+    },
+    {
+      "id": "8",
+      "path": "/angular/about",
+      "url": "http://localhost:3005/remoteEntry.js",
+      "scope": "angular",
+      "module": "./module",
+      "isMenuOption": false,
+      "component": "app-angular"
+    },
+    {
+      "id": "7",
+      "path": "/angular/",
+      "url": "http://localhost:3005/remoteEntry.js",
+      "scope": "angular",
+      "module": "./module",
+      "isMenuOption": true,
+      "component": "app-angular"
+    },
+    {
       "id": "6",
       "path": "/react/users",
       "url": "http://localhost:3004/remoteEntry.js",
@@ -34,7 +61,7 @@
       "scope": "about",
       "module": "./module",
       "isMenuOption": true,
-      "component": "app-about"
+      "component": "angular-about"
     },
     {
       "id": "2",
