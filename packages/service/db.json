@@ -2,27 +2,30 @@
   "modules": [
     {
       "id": "6",
-      "path": "/application/users",
+      "path": "/react/users",
       "url": "http://localhost:3004/remoteEntry.js",
       "scope": "react",
       "module": "./module",
-      "isMenuOption": false
+      "isMenuOption": false,
+      "component": "app-react"
     },
     {
       "id": "5",
-      "path": "/application/about",
+      "path": "/react/about",
       "url": "http://localhost:3004/remoteEntry.js",
       "scope": "react",
       "module": "./module",
-      "isMenuOption": false
+      "isMenuOption": false,
+      "component": "app-react"
     },
     {
       "id": "4",
-      "path": "/application",
+      "path": "/react",
       "url": "http://localhost:3004/remoteEntry.js",
       "scope": "react",
       "module": "./module",
-      "isMenuOption": true
+      "isMenuOption": true,
+      "component": "app-react"
     },
     {
       "id": "3",
@@ -30,7 +33,8 @@
       "url": "http://localhost:3003/remoteEntry.js",
       "scope": "about",
       "module": "./module",
-      "isMenuOption": true
+      "isMenuOption": true,
+      "component": "app-about"
     },
     {
       "id": "2",
@@ -38,7 +42,8 @@
       "url": "http://localhost:3002/remoteEntry.js",
       "scope": "contact",
       "module": "./module",
-      "isMenuOption": true
+      "isMenuOption": true,
+      "component": "app-contact"
     },
     {
       "id": "1",
@@ -46,7 +51,8 @@
       "url": "http://localhost:3001/remoteEntry.js",
       "scope": "home",
       "module": "./module",
-      "isMenuOption": true
+      "isMenuOption": true,
+      "component": "app-home"
     }
   ]
 }

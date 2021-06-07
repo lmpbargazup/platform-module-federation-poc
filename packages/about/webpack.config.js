@@ -5,8 +5,8 @@ module.exports = (options) => {
     entry: "./index.js",
     output: {
       filename: "bundle.js",
-      publicPath: "http://localhost:3004/",
-      uniqueName: "react",
+      publicPath: "http://localhost:3003/",
+      uniqueName: "about",
     },
     module: {
       rules: [
@@ -27,7 +27,7 @@ module.exports = (options) => {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: "react",
+        name: "about",
         filename: "remoteEntry.js",
         exposes: {
           "./module": "./app.js",
@@ -37,7 +37,7 @@ module.exports = (options) => {
       }),
     ],
     devServer: {
-      port: 3004,
+      port: 3003,
     },
   };
 };
