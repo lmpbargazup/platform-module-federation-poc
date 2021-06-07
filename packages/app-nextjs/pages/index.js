@@ -9,7 +9,7 @@ const Home = () => {
       <System
         system={{
           url: "http://localhost:3002/remoteEntry.js",
-          scope: "app-contact",
+          scope: "contact",
           module: "./module",
           id: 10,
           component: "app-contact",
