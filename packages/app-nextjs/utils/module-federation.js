@@ -74,11 +74,11 @@ export const System = ({ system }) => {
     loadComponent(system.scope, system.module);
   }
 
-  const Component = `${system.component}`;
+  const Component = system.component ? `${system.component}` : undefined;
 
   return (
     <React.Suspense fallback="Loading System">
-      <Component />
+      {Component && <Component />}
     </React.Suspense>
   );
 };
