@@ -1,13 +1,11 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^3.22.1"
   },
   "scripts": {
-    "start": "lerna run start --parallel"
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start --stream"
   }
 }
