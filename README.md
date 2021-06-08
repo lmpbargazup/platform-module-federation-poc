@@ -10,7 +10,8 @@ This example demos a basic host application loading remote component and the hos
 
 # Running Demo
 
-Run `yarn start`. Lerna run all projects for you.
+First `yarn bootstrap`.
+After run `yarn start`. Lerna run all projects for you.
 
 - [localhost:3000](http://localhost:3000/) (HOST)
 - [localhost:3001](http://localhost:3001/) (STANDALONE REMOTE)
