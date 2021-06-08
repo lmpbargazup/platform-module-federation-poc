@@ -14,6 +14,11 @@ import { UsersComponent } from './users/users.component';
     BrowserModule,
     RouterModule.forRoot([
       {
+        path: '',
+        redirectTo: '/mfe-angular/home',
+        pathMatch: 'full',
+      },
+      {
         path: 'mfe-angular',
         redirectTo: '/mfe-angular/home',
         pathMatch: 'full',
