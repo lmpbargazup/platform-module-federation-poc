@@ -42,31 +42,31 @@
     },
     {
       "id": "6",
-      "path": "/react/users",
+      "path": "/mfe-react/users",
       "url": "http://localhost:3004/remoteEntry.js",
-      "scope": "react",
+      "scope": "mfereact",
       "module": "./module",
       "isMenuOption": false,
-      "component": "app-react",
+      "component": "mfe-react",
       "name": ""
     },
     {
       "id": "5",
-      "path": "/react/about",
+      "path": "/mfe-react/about",
       "url": "http://localhost:3004/remoteEntry.js",
-      "scope": "react",
+      "scope": "mfereact",
       "module": "./module",
       "isMenuOption": false,
-      "component": "app-react"
+      "component": "mfe-react"
     },
     {
       "id": "4",
-      "path": "/react",
+      "path": "/mfe-react",
       "url": "http://localhost:3004/remoteEntry.js",
-      "scope": "react",
+      "scope": "mfereact",
       "module": "./module",
       "isMenuOption": true,
-      "component": "app-react",
+      "component": "mfe-react",
       "name": "react"
     },
     {

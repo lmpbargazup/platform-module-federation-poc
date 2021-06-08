@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
-const PREFIX = "/react";
+const PREFIX = "/mfe-react";
 
 const withPrefix = (path) => `${PREFIX}${path}`;
 
@@ -60,4 +60,4 @@ class AppElement extends HTMLElement {
   }
 }
 
-customElements.define("app-react", AppElement);
+customElements.define("mfe-react", AppElement);
