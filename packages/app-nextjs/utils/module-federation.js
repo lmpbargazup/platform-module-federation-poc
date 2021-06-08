@@ -8,9 +8,7 @@ const loadComponent = async (scope, module) => {
     const factory = await window[scope].get(module);
     const Module = factory();
     return Module;
-  } catch (e) {
-    console.log("error:", e);
-  }
+  } catch (e) {}
 };
 
 const useDynamicScript = (args) => {

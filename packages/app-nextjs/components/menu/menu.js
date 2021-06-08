@@ -29,7 +29,7 @@ const Menu = () => {
   useEffect(() => {
     if (plugins.length > 0) {
       const plugin = plugins.filter(
-        (plugin) => plugin.path === router.asPath
+        (plugin) => plugin.path === window.location.pathname
       )[0];
       actions.setCurrentPlugin(plugin);
     }
@@ -42,7 +42,7 @@ const Menu = () => {
           <Fragment key={plugin.id}>
             {plugin.isMenuOption && (
               <MenuOption onClick={() => renderPlugin(plugin)}>
-                {plugin.scope}
+                {plugin.name}
               </MenuOption>
             )}
           </Fragment>

@@ -1,3 +1,4 @@
+import "zone.js";
 import Menu from "../components/menu/menu";
 import { AppWrapper } from "../context/state";
 import {

@@ -4,7 +4,7 @@ import { System } from "../utils/module-federation";
 const Module = () => {
   const { state } = useAppContext();
 
-  return <>{state.currentPlugin && <System system={state.currentPlugin} />}</>;
+  return <System system={state.currentPlugin} />;
 };
 
 export default Module;

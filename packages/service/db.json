@@ -1,31 +1,44 @@
 {
   "modules": [
     {
-      "id": "9",
-      "path": "/angular/users",
+      "id": "10",
+      "path": "/mfe-angular/users",
       "url": "http://localhost:3005/remoteEntry.js",
-      "scope": "angular",
+      "scope": "mfeangular",
       "module": "./module",
       "isMenuOption": false,
-      "component": "app-angular"
+      "component": "mfe-angular",
+      "name": ""
+    },
+    {
+      "id": "9",
+      "path": "/mfe-angular/about",
+      "url": "http://localhost:3005/remoteEntry.js",
+      "scope": "mfeangular",
+      "module": "./module",
+      "isMenuOption": false,
+      "component": "mfe-angular",
+      "name": ""
     },
     {
       "id": "8",
-      "path": "/angular/about",
+      "path": "/mfe-angular/home",
       "url": "http://localhost:3005/remoteEntry.js",
-      "scope": "angular",
+      "scope": "mfeangular",
       "module": "./module",
       "isMenuOption": false,
-      "component": "app-angular"
+      "component": "mfe-angular",
+      "name": ""
     },
     {
       "id": "7",
-      "path": "/angular",
+      "path": "/mfe-angular",
       "url": "http://localhost:3005/remoteEntry.js",
-      "scope": "angular",
+      "scope": "mfeangular",
       "module": "./module",
       "isMenuOption": true,
-      "component": "app-angular"
+      "component": "mfe-angular",
+      "name": "angular"
     },
     {
       "id": "6",
@@ -34,7 +47,8 @@
       "scope": "react",
       "module": "./module",
       "isMenuOption": false,
-      "component": "app-react"
+      "component": "app-react",
+      "name": ""
     },
     {
       "id": "5",
@@ -52,7 +66,8 @@
       "scope": "react",
       "module": "./module",
       "isMenuOption": true,
-      "component": "app-react"
+      "component": "app-react",
+      "name": "react"
     },
     {
       "id": "3",
@@ -61,7 +76,8 @@
       "scope": "about",
       "module": "./module",
       "isMenuOption": true,
-      "component": "app-about"
+      "component": "app-about",
+      "name": "about"
     },
     {
       "id": "2",
@@ -70,7 +86,8 @@
       "scope": "contact",
       "module": "./module",
       "isMenuOption": true,
-      "component": "app-contact"
+      "component": "app-contact",
+      "name": "contact"
     },
     {
       "id": "1",
@@ -79,7 +96,8 @@
       "scope": "home",
       "module": "./module",
       "isMenuOption": true,
-      "component": "app-home"
+      "component": "app-home",
+      "name": "home"
     }
   ]
 }
