@@ -2,11 +2,13 @@
 
 This example demos a basic host application loading remote component and the host application is a SSR with NextJS.
 
-- `app-nextjs` is the host application.
+- `shell-nextjs` is the host application.
+- `service` standalone application which mock API.
 - `about` standalone application which exposes `module` component.
 - `contact` standalone application which exposes `module` component.
 - `home` standalone application which exposes `module` component.
-- `service` standalone application which mock API.
+- `mfe-angular` standalone angular app which exposes `module` component.
+- `mfe-react` standalone react app which exposes `module` component.
 
 # Running Demo
 
