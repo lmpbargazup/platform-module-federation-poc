@@ -6,7 +6,7 @@ module.exports = () => {
   return {
     entry: "./src/index.js",
     output: {
-      filename: "[name].js",
+      filename: "bundle.js",
       path: path.resolve(__dirname, "./dist"),
       publicPath: "http://localhost:3004/",
     },
@@ -38,13 +38,13 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         filename: "index.html",
         template: "./public/index.html",
-        title: "app",
+        title: "mfe-react",
       }),
       new ModuleFederationPlugin({
         name: "mfereact",
         filename: "remoteEntry.js",
         exposes: {
-          "./module": "./src/app.js",
+          "./module": "./src/bootstrap.js",
         },
 
         shared: ["react", "react-dom"],
