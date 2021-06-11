@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
 const PREFIX = "/mfe-react";
@@ -51,13 +50,3 @@ function About() {
 function Users() {
   return <h2>React Users</h2>;
 }
-
-ReactDOM.render(<App />, document.getElementById("root"));
-
-class AppElement extends HTMLElement {
-  connectedCallback() {
-    ReactDOM.render(<App />, this);
-  }
-}
-
-customElements.define("mfe-react", AppElement);
