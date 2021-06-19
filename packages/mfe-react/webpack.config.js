@@ -41,7 +41,7 @@ module.exports = () => {
         title: "mfe-react",
       }),
       new ModuleFederationPlugin({
-        name: "mfereact",
+        name: "mfe_react",
         filename: "remoteEntry.js",
         exposes: {
           "./module": "./src/bootstrap.js",
